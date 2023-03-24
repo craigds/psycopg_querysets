@@ -6,6 +6,13 @@ Querysets are a way to chain queries in a more pythonic way. The API is inspired
 
 This library deliberately focuses on raw SQL queries, and doesn't dream of becoming any kind of ORM. No model support is planned.
 
+## Notes:
+
+I didn't end up using this project, and probably won't develop it further.
+I'm leaving it here in case it's useful to someone else. It will probably need further development to be useful. 
+
+Good luck!
+
 ## Usage
 
 ```python
@@ -14,7 +21,3 @@ from psycopg_querysets import wrap_connection
 with wrap_connection(psycopg.connect(DSN)) as conn:
     print(conn.queryset("SELECT * FROM users").filter("name = %s", ["John"]))
 ```
-
-## Notes:
-
-There are important TODOs in the code. This is a work in progress.
